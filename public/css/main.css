@@ -24,7 +24,7 @@ li {
     margin-right: auto;
     margin-left: auto;
     background-color: white;
-    border-radius: 25px;
+    border-radius: 16px;
 }
 
 *,
@@ -37,7 +37,8 @@ li {
     position: relative;
 }
 
-.background__img {
+.header-background__img {
+    object-fit: cover;
     width: 100%;
     height: 250px;
     opacity: 0.6;
@@ -56,7 +57,6 @@ li {
     padding: 0;
     align-items: center;
     display: flex;
-    border-radius: 25px;
 }
 
 .nav__item {
@@ -116,10 +116,75 @@ ul li.active a {
     line-height: 1.5;
     border-radius: .25rem;
     padding: .5rem 1rem;
-    background-color:azure;
-    border-color:azure;
+    background-color: azure;
+    border-color: azure;
 }
 
 .main__page {
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1140px;
+    position: absolute;
+    margin-top: 1rem;
+}
+
+.sideblock__container {
+    display: block;
+    flex: 0 0 25%;
+    padding-top: 1.25rem;
+}
+
+.wall__container {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-top: 1.25rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border-radius: 25px;
+    border-radius: 18px;
+}
+
+.sideblock-background__img {
+    border-radius: 16px;
+    transform: scale(-1, -1);
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.08));
+}
+
+.left-sideblock__img {
+    object-fit: none;
+    object-position: 20% 50%;
+}
+
+.right-sideblock__img {
+    object-fit: none;
+    object-position: 100% 50%;
+}
+
+.wall-background__img {
+    border-radius: 16px;
+    object-fit: none;
+    object-position: 50% 50%;
+    transform: scale(1, -1);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.08));
+}
+
+.sideblock__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.sideblock__content {
+    position: absolute;
+    padding: 0 35px;
+    top: 40px;
 }

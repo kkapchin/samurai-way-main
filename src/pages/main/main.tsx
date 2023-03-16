@@ -1,9 +1,13 @@
+import About from "../../components/about/about";
+import Playlist from "../../components/playlist/playlist";
+import Wall from "../../components/wall/wall";
+
 export default function Main() {
     return (
         <div className="main__page">
-            About
-            Feed
-            Friends
+            <Playlist />
+            <Wall />
+            <About />
         </div>
     );
 }
