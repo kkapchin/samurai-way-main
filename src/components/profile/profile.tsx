@@ -6,7 +6,7 @@ export default function Profile() {
                 <span className="profile__name">Ivo Namtar Wijers</span>
             </div>
             <div>
-                <button className="btn__edit-profile">Edit profile</button>
+                <button className="profile-edit__btn">Edit profile</button>
             </div>
         </div>
     );

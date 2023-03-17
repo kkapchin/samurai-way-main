@@ -3,7 +3,7 @@ import Main from './pages/main/main';
 
 function App() {
   return (
-    <div className="wrapper">
+    <div className="main__wrap">
       <Header />
       <Main />
     </div>

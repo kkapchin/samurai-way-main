@@ -1,10 +1,11 @@
 export default function Playlist() {
     return (
-        <div className="sideblock__container">
-            <div className="sideblock__content">
-                <h6 className="sideblock__title">Playlist</h6>
+        <div className="sideblock__wrap">
+            <div className="sideblock__container grad-border">
+                <div className="sideblock__content grad-bordered">
+                    <h6 className="title">Playlist</h6>
+                </div>
             </div>
-            <img className="sideblock-background__img left-sideblock__img" src="https://bootdey.com/img/Content/bg1.jpg" alt="background"></img>
         </div>
     );
 }
