@@ -18,13 +18,26 @@ li {
     list-style-type: none;
 }
 
-.wrapper {
+.main__wrap {
     width: 100%;
+    height: auto;
     max-width: 1140px;
     margin-right: auto;
     margin-left: auto;
     background-color: white;
-    border-radius: 25px;
+    border-radius: 16px;
+}
+
+.grad-border {
+    background: linear-gradient(to right, orange, purple, red, aquamarine, purple, red);
+    border-radius: 12px;
+    padding: 3px;
+}
+
+.grad-bordered {
+    background-color: azure;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 *,
@@ -33,21 +46,24 @@ li {
     box-sizing: border-box;
 }
 
-.header__container {
-    position: relative;
+.header__wrap {
+    padding-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
-.background__img {
-    width: 100%;
-    height: 250px;
-    opacity: 0.6;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+.header__container {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .navbar__container {
-    position: absolute;
-    top: 220px;
     width: 100%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1140px;
+    top: 160px;
 }
 
 .navbar {
@@ -56,7 +72,6 @@ li {
     padding: 0;
     align-items: center;
     display: flex;
-    border-radius: 25px;
 }
 
 .nav__item {
@@ -76,11 +91,9 @@ ul li.active a {
 
 .profile__container {
     display: flex;
-    position: absolute;
-    padding: 0 30px;
+    padding: 30px;
     align-items: center;
     justify-content: space-between;
-    top: 95px;
     width: 100%;
 }
 
@@ -88,6 +101,13 @@ ul li.active a {
     object-fit: cover;
     width: 135px;
     height: 135px;
+    border-radius: 50%;
+}
+
+.post-author__avatar {
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
 
@@ -105,7 +125,7 @@ ul li.active a {
     align-items: center;
 }
 
-.btn__edit-profile {
+.profile-edit__btn {
     cursor: pointer;
     display: inline-block;
     text-align: center;
@@ -116,10 +136,146 @@ ul li.active a {
     line-height: 1.5;
     border-radius: .25rem;
     padding: .5rem 1rem;
-    background-color:azure;
-    border-color:azure;
+    background-color: azure;
+    border-color: azure;
 }
 
 .main__page {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1140px;
+    position: absolute;
+    margin-top: 1rem;
+}
+
+.sideblock__wrap {
+    display: block;
+    height: 100%;
+    flex: 0 0 25%;
+    padding-top: 1.25rem;
+}
+
+.wall__wrap {
+    display: block;
+    flex: 0 0 50%;
+    max-width: 50%;
+    height: auto;
+    padding-top: 1.25rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border-radius: 25px;
+    border-radius: 18px;
+}
+
+.post__container {
+    margin-bottom: 1.25rem;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+.sideblock__content {
+    width: 100%;
+}
+
+.left-sideblock__img {
+    object-position: 20% 50%;
+}
+
+.right-sideblock__img {
+    object-position: 100% 50%;
+}
+
+.post__author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    padding-top: 5px;
+}
+
+.post-author__info {
+    margin-left: 10px;
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.post__time {
+    margin-top: 0;
+}
+
+.post-edit__btn {
+    cursor: pointer;
+    padding-bottom: 18px;
+}
+
+.post__text {
+    padding: 15px;
+}
+
+.like__btn {
     position: relative;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    margin: 5px 15px;
+}
+
+.like__btn::before,
+.like__btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 11px;
+    height: 16px;
+    border-radius: 10px 10px 0 0;
+    background: #212529;
+}
+
+.like__btn::before {
+    left: 10px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.like__btn::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+.like__btn-active {
+    position: relative;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    margin: 5px 15px;
+}
+
+.like__btn-active::before,
+.like__btn-active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 11px;
+    height: 16px;
+    border-radius: 10px 10px 0 0;
+    background: crimson;
+}
+
+.like__btn-active::before {
+    left: 10px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.like__btn-active::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
 }
