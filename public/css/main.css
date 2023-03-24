@@ -82,7 +82,7 @@ li {
     align-items: center;
 }
 
-ul li.active a {
+ul li a.active {
     color: dodgerblue;
     margin: 0;
 }
