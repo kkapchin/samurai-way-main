@@ -1,13 +1,13 @@
 import Header from './components/header/header';
 import Main from './pages/main/main';
+import Messenger from "./pages/messenger/messenger";
 
-function App() {
-  return (
-    <div className="main__wrap">
-      <Header />
-      <Main />
-    </div>
-  );
+export default function App() {
+    return (
+        <div className="app__wrap">
+            <Header/>
+            {/*<Main />*/}
+            <Messenger/>
+        </div>
+    );
 }
-
-export default App;

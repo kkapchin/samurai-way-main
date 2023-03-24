@@ -1,7 +1,7 @@
 export default function Post() {
     return (
         <div className="post__container grad-border">
-            <div className="post___content grad-bordered">
+            <div className="post__content grad-bordered">
                 <div className="post__author">
                     <div className="d__flex align__c">
                         <img className="post-author__avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF_-_Xc8u7HQEVA66YYznJZwFctc06g3wFhKajU_BAVZb1BiFXBd8qChGfjK8WBkfALq0&usqp=CAU" alt="profile-avatar"></img>

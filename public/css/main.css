@@ -18,7 +18,7 @@ li {
     list-style-type: none;
 }
 
-.main__wrap {
+.app__wrap {
     width: 100%;
     height: auto;
     max-width: 1140px;
@@ -32,12 +32,14 @@ li {
     background: linear-gradient(to right, orange, purple, red, aquamarine, purple, red);
     border-radius: 12px;
     padding: 3px;
+    width: 100%;
 }
 
 .grad-bordered {
     background-color: azure;
-    padding: 5px;
-    border-radius: 10px;
+    /*padding: 5px;*/
+    border-radius: 9px;
+    width: 100%;
 }
 
 *,
@@ -55,15 +57,11 @@ li {
 .header__container {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    padding: 5px;
 }
 
 .navbar__container {
-    width: 100%;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1140px;
-    top: 160px;
+
 }
 
 .navbar {
@@ -91,7 +89,7 @@ ul li.active a {
 
 .profile__container {
     display: flex;
-    padding: 30px;
+    padding: 30px 30px 0 30px;
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -131,13 +129,12 @@ ul li.active a {
     text-align: center;
     vertical-align: middle;
     user-select: none;
-    border: 1px solid transparent;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
     padding: .5rem 1rem;
     background-color: azure;
-    border-color: azure;
+    border: 1px solid azure;
 }
 
 .main__page {
@@ -148,7 +145,41 @@ ul li.active a {
     margin-top: 1rem;
 }
 
-.sideblock__wrap {
+.messenger__page {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1140px;
+    position: absolute;
+    margin-top: 2.25rem;
+}
+
+.messenger__wrap {
+    display: flex;
+}
+
+.chat-list__wrap {
+    display: block;
+    height: 100%;
+    flex: 35% 0;
+    background: linear-gradient(to right, orange, purple, red, aquamarine, purple, red);
+    padding-right: 3px;
+}
+
+.chat-list__container {
+    background-color: azure;
+    padding-right: 5px;
+    border-radius: 9px 0 0 9px;
+}
+
+.chat__wrap {
+    display: block;
+    flex: 0 65%;
+    height: auto;
+    border-radius: 18px;
+}
+
+.side-block__wrap {
     display: block;
     height: 100%;
     flex: 0 0 25%;
@@ -163,7 +194,6 @@ ul li.active a {
     padding-top: 1.25rem;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-    border-radius: 25px;
     border-radius: 18px;
 }
 
@@ -174,24 +204,27 @@ ul li.active a {
     width: 100%;
 }
 
-.sideblock__content {
+.post__content {
+    padding: 5px;
+}
+
+.side-block__content {
     width: 100%;
 }
 
-.left-sideblock__img {
+/*.left-side-block__img {
     object-position: 20% 50%;
 }
 
-.right-sideblock__img {
+.right-side-block__img {
     object-position: 100% 50%;
-}
+}*/
 
 .post__author {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
-    padding-top: 5px;
+    padding: 5px 15px 15px;
 }
 
 .post-author__info {
