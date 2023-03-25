@@ -315,3 +315,8 @@ ul li a.active {
 .chat-list__container .active {
     background: lightblue;
 }
+
+.chat__container {
+    padding: 15px;
+    border-radius: 9px;
+}
