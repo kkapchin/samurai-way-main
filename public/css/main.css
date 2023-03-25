@@ -168,7 +168,6 @@ ul li a.active {
 
 .chat-list__container {
     background-color: azure;
-    padding-right: 5px;
     border-radius: 9px 0 0 9px;
 }
 
@@ -211,14 +210,6 @@ ul li a.active {
 .side-block__content {
     width: 100%;
 }
-
-/*.left-side-block__img {
-    object-position: 20% 50%;
-}
-
-.right-side-block__img {
-    object-position: 100% 50%;
-}*/
 
 .post__author {
     display: flex;
@@ -311,4 +302,21 @@ ul li a.active {
     left: 0;
     transform: rotate(45deg);
     transform-origin: 100% 100%;
+}
+
+.chat-list__item {
+    cursor: pointer;
+    padding: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 9px;
+}
+
+.chat-list__container .active {
+    background: lightblue;
+}
+
+.chat__container {
+    padding: 15px;
+    border-radius: 9px;
 }
