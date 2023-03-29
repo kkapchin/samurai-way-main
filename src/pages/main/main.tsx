@@ -10,9 +10,16 @@ type MainPropsType = {
 export default function Main({ posts }: MainPropsType) {
     return (
         <div className="main__page">
-            <Playlist />
+
+            <div className="side-block__wrap">
+                <Playlist />
+            </div>
+
             <Wall posts={posts}/>
-            <About />
+
+            <div className="side-block__wrap">
+                <About />
+            </div>
         </div>
     );
 }
