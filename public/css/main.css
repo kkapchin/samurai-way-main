@@ -212,6 +212,10 @@ ul li a.active {
     width: 100%;
 }
 
+.side-block__container {
+    margin-bottom: 1.25rem;
+}
+
 .post__author {
     display: flex;
     align-items: center;

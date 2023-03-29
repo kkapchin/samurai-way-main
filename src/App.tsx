@@ -14,8 +14,14 @@ export default function App({ state }: AppPropsType) {
         <BrowserRouter>
             <div className="app__wrap">
                 <Header />
-                <Route exact path={AppRoute.Main} render={() => <Main posts={state.main.posts}/>} />
-                <Route path={AppRoute.Messenger} render={() => <Messenger users={state.messenger.users} />} />
+                <Route
+                    exact path={AppRoute.Main}
+                    render={() => <Main posts={state.main.posts} friends={state.main.friends}/>}
+                />
+                <Route
+                    path={AppRoute.Messenger}
+                    render={() => <Messenger users={state.messenger.users} />}
+                />
             </div>
         </BrowserRouter>
     );
