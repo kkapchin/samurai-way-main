@@ -1,4 +1,6 @@
 export enum AppRoute {
-    Main = '/home',
+    Main = '/',
     Messenger = '/messenger',
+    Photos = '/photos',
+    Shorts = '/shorts',
 }
