@@ -11,7 +11,7 @@ export default function App() {
         <BrowserRouter>
             <div className="app__wrap">
                 <Header />
-                <Route path={AppRoute.Main} render={() => <Main posts={posts}/>} />
+                <Route exact path={AppRoute.Main} render={() => <Main posts={posts}/>} />
                 <Route path={AppRoute.Messenger} render={() => <Messenger users={users} />} />
             </div>
         </BrowserRouter>
