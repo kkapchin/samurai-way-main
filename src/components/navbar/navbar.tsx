@@ -6,16 +6,16 @@ export default function Navbar() {
         <div className="navbar__container">
             <ul className="navbar">
                 <li className="nav__item">
-                    <NavLink to={AppRoute.Main} >Home</NavLink>
+                    <NavLink exact to={AppRoute.Main} >Home</NavLink>
                 </li>
                 <li className="nav__item">
                     <NavLink to={AppRoute.Messenger} >Messenger</NavLink>
                 </li>
                 <li className="nav__item">
-                    <a href="/" >Photos</a>
+                    <NavLink to={AppRoute.Photos} >Photos</NavLink>
                 </li>
                 <li className="nav__item">
-                    <a href="/" >Shorts</a>
+                    <NavLink to={AppRoute.Shorts} >Shorts</NavLink>
                 </li>
             </ul>
         </div>
