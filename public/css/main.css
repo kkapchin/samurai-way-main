@@ -107,6 +107,7 @@ ul li a.active {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    margin-right: 10px;
 }
 
 .profile__name {
@@ -211,6 +212,10 @@ ul li a.active {
     width: 100%;
 }
 
+.side-block__container {
+    margin-bottom: 1.25rem;
+}
+
 .post__author {
     display: flex;
     align-items: center;
@@ -219,7 +224,6 @@ ul li a.active {
 }
 
 .post-author__info {
-    margin-left: 10px;
 }
 
 .title {
@@ -228,6 +232,7 @@ ul li a.active {
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.2;
+    text-align: center;
 }
 
 .post__time {
@@ -310,6 +315,7 @@ ul li a.active {
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 9px;
+    display: flex;
 }
 
 .chat-list__container .active {
@@ -319,4 +325,13 @@ ul li a.active {
 .chat__container {
     padding: 15px;
     border-radius: 9px;
+}
+
+.d__table {
+    display: table;
+}
+
+span .title {
+    display: table-cell;
+    vertical-align: middle;
 }

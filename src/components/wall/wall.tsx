@@ -1,10 +1,14 @@
 import Post from "../post/post";
+import {PostType} from "../../types/post-type";
 
-export default function Wall() {
+type WallPropsType = {
+    posts: Array<PostType>
+}
+
+export default function Wall({ posts }: WallPropsType) {
     return (
         <div className="wall__wrap">
-            <Post />
-            <Post />
+            {posts.map(post => <Post key={post.id} post={post} />)}
         </div>
     );
 }

@@ -1,16 +1,15 @@
+import {AppRoute, AVATAR_PLACEHOLDER} from "../../../const";
 import {NavLink} from "react-router-dom";
-import {AppRoute, AVATAR_PLACEHOLDER} from "../../const";
-import {UserType} from "../../types/user-type";
+import {UserType} from "../../../types/user-type";
 
-type ChatListItemPropsType = {
-    user: UserType;
+//1. fix NavLink route to user page
+type FriendPropsType = {
+    user: UserType
 }
-
-export default function ChatListItem({user}: ChatListItemPropsType) {
-    const isActive = false;
+export default function Friend ({ user }: FriendPropsType) {
     return (
-        <NavLink to={`${AppRoute.Messenger}/${user.id}`}>
-            <div className={`chat-list__item ${isActive && 'active'}`}>
+        <NavLink to={`${AppRoute.Main}/${user.id}`}>
+            <div className="chat-list__item">
                 <img
                     className="post-author__avatar"
                     src={`${user.avatar ? user.avatar : AVATAR_PLACEHOLDER}`}

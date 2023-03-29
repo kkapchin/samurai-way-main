@@ -1,18 +1,16 @@
 import ChatListItem from "./chat-list-item";
 import {UserType} from "../../types/user-type";
 
-export default function ChatList() {
+type ChatListPropsType = {
+    users: Array<UserType>
+}
 
-    const users: Array<UserType> = [
-        {id: 1, name: 'Bloody d0b1k'},
-        {id: 2, name: 'Madara Alexandrovich'},
-        {id: 3, name: 'Dedist Drebedist'},
-    ];
+export default function ChatList({ users }: ChatListPropsType) {
 
     return (
         <div className="chat-list__wrap">
             <div className="chat-list__container">
-                {users.map(user => <ChatListItem user={user} />)}
+                {users.map(user => <ChatListItem key={user.id} user={user} />)}
             </div>
         </div>
     );
