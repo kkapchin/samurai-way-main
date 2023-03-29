@@ -3,16 +3,19 @@ import Main from './pages/main/main';
 import Messenger from "./pages/messenger/messenger";
 import {BrowserRouter, Route} from "react-router-dom";
 import {AppRoute} from "./const";
-import {posts} from "./mocks/posts";
-import {users} from "./mocks/users";
+import {StateType} from "./types/state-type";
 
-export default function App() {
+type AppPropsType = {
+    state: StateType
+}
+
+export default function App({ state }: AppPropsType) {
     return (
         <BrowserRouter>
             <div className="app__wrap">
                 <Header />
-                <Route exact path={AppRoute.Main} render={() => <Main posts={posts}/>} />
-                <Route path={AppRoute.Messenger} render={() => <Messenger users={users} />} />
+                <Route exact path={AppRoute.Main} render={() => <Main posts={state.main.posts}/>} />
+                <Route path={AppRoute.Messenger} render={() => <Messenger users={state.messenger.users} />} />
             </div>
         </BrowserRouter>
     );
