@@ -10,7 +10,7 @@ export default function ChatList({ users }: ChatListPropsType) {
     return (
         <div className="chat-list__wrap">
             <div className="chat-list__container">
-                {users.map(user => <ChatListItem user={user} />)}
+                {users.map(user => <ChatListItem key={user.id} user={user} />)}
             </div>
         </div>
     );

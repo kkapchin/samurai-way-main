@@ -8,7 +8,7 @@ type WallPropsType = {
 export default function Wall({ posts }: WallPropsType) {
     return (
         <div className="wall__wrap">
-            {posts.map(post => <Post post={post} />)}
+            {posts.map(post => <Post key={post.id} post={post} />)}
         </div>
     );
 }
