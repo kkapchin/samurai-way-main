@@ -7,16 +7,21 @@ import {StateType} from "./types/state-type";
 
 type AppPropsType = {
     state: StateType
+    addPost: (text: string) => void
 }
 
-export default function App({ state }: AppPropsType) {
+export default function App({ state, addPost }: AppPropsType) {
     return (
         <BrowserRouter>
             <div className="app__wrap">
                 <Header />
                 <Route
                     exact path={AppRoute.Main}
-                    render={() => <Main posts={state.main.posts} friends={state.main.friends}/>}
+                    render={() => <Main
+                        posts={state.main.posts}
+                        friends={state.main.friends}
+                        addPost={addPost}
+                    />}
                 />
                 <Route
                     path={AppRoute.Messenger}

@@ -9,9 +9,10 @@ import AddPost from "../../components/add-post/add-post";
 type MainPropsType = {
     posts: Array<PostType>
     friends: Array<UserType>
+    addPost: (text: string) => void
 }
 
-export default function Main({posts, friends}: MainPropsType) {
+export default function Main({ posts, friends, addPost }: MainPropsType) {
     return (
         <div className="main__page">
 
@@ -21,7 +22,7 @@ export default function Main({posts, friends}: MainPropsType) {
             </div>
 
             <div className="middle-block__wrap">
-                <AddPost/>
+                <AddPost addPost={addPost}/>
                 <Wall posts={posts}/>
             </div>
 

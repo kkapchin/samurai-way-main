@@ -1,11 +1,21 @@
-import React, {LegacyRef} from "react";
+import React from "react";
 
-export default function AddPost() {
+type PropsType = {
+    addPost: (text: string) => void
+}
 
-    const newPostRef: LegacyRef<HTMLTextAreaElement> | undefined = React.createRef();
+export default function AddPost({ addPost }: PropsType) {
+
+    const newPostRef = React.createRef<HTMLTextAreaElement>();
 
     const addNewPost = () => {
-        alert(newPostRef.current?.value);
+        if (!newPostRef.current) {
+            return;
+        }
+        if (newPostRef.current.value === '') {
+            return;
+        }
+        addPost(newPostRef.current.value);
     }
 
     return (
