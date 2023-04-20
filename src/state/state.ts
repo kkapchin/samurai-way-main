@@ -2,6 +2,7 @@ import {posts} from "../mocks/posts";
 import {users} from "../mocks/users";
 import {StateType} from "../types/state-type";
 import {friends} from "../mocks/friends";
+import {render} from "../render";
 
 const state: StateType = {
     main: {
@@ -26,8 +27,8 @@ export const addPost = (text: string) => {
         }
     }
 
-    state.main.posts.push(newPost);
-    console.log(state.main.posts)
+    state.main.posts = [newPost, ...state.main.posts];
+    render(state);
 }
 
 export default state;

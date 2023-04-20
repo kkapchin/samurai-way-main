@@ -16,6 +16,7 @@ export default function AddPost({ addPost }: PropsType) {
             return;
         }
         addPost(newPostRef.current.value);
+        newPostRef.current.value = '';
     }
 
     return (
