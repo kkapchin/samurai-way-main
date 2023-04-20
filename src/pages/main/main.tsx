@@ -4,25 +4,29 @@ import Wall from "../../components/wall/wall";
 import {PostType} from "../../types/post-type";
 import Friends from "../../components/friends/friends";
 import {UserType} from "../../types/user-type";
+import AddPost from "../../components/add-post/add-post";
 
 type MainPropsType = {
     posts: Array<PostType>
     friends: Array<UserType>
 }
 
-export default function Main({ posts, friends }: MainPropsType) {
+export default function Main({posts, friends}: MainPropsType) {
     return (
         <div className="main__page">
 
             <div className="side-block__wrap">
-                <Playlist />
+                <Playlist/>
                 <Friends friends={friends}/>
             </div>
 
-            <Wall posts={posts}/>
+            <div className="middle-block__wrap">
+                <AddPost/>
+                <Wall posts={posts}/>
+            </div>
 
             <div className="side-block__wrap">
-                <About />
+                <About/>
             </div>
         </div>
     );
