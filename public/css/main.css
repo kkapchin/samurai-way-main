@@ -24,7 +24,6 @@ li {
     max-width: 1140px;
     margin-right: auto;
     margin-left: auto;
-    background-color: white;
     border-radius: 16px;
 }
 
@@ -151,8 +150,8 @@ ul li a.active {
     flex-wrap: wrap;
     width: 100%;
     max-width: 1140px;
-    position: absolute;
     margin-top: 2.25rem;
+    margin-bottom: 2.25rem;
 }
 
 .messenger__wrap {
@@ -332,6 +331,10 @@ ul li a.active {
 .chat__container {
     padding: 15px;
     border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .d__table {
@@ -341,4 +344,10 @@ ul li a.active {
 span .title {
     display: table-cell;
     vertical-align: middle;
+}
+
+.new-message__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
