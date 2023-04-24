@@ -18,7 +18,7 @@ export const posts: Array<PostType> = [
         time: '5 min ago',
         user: {
             id: 2,
-            name: 'Madara Alexndrovich',
+            name: 'Madara Alexandrovich',
             avatar: 'https://oyster.ignimgs.com/mediawiki/apis.ign.com/star-wars-episode-7/8/83/Jabba-the-hut.jpg?width=640',
 
         }
