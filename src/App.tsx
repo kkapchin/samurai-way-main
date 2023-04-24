@@ -8,9 +8,10 @@ import {StateType} from "./types/state-type";
 type AppPropsType = {
     state: StateType
     addPost: (text: string) => void
+    updateNewPostText: (text: string) => void
 }
 
-export default function App({ state, addPost }: AppPropsType) {
+export default function App({ state, addPost, updateNewPostText }: AppPropsType) {
     return (
         <BrowserRouter>
             <div className="app__wrap">
@@ -21,6 +22,8 @@ export default function App({ state, addPost }: AppPropsType) {
                         posts={state.main.posts}
                         friends={state.main.friends}
                         addPost={addPost}
+                        newPostText={state.main.newPostText}
+                        updateNewPostText={updateNewPostText}
                     />}
                 />
                 <Route

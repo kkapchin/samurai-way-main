@@ -10,9 +10,12 @@ type MainPropsType = {
     posts: Array<PostType>
     friends: Array<UserType>
     addPost: (text: string) => void
+    updateNewPostText: (text: string) => void
+    newPostText: string
 }
 
-export default function Main({ posts, friends, addPost }: MainPropsType) {
+export default function Main(props: MainPropsType) {
+    const { posts, friends, addPost, newPostText, updateNewPostText } = props;
     return (
         <div className="main__page">
 
@@ -22,7 +25,11 @@ export default function Main({ posts, friends, addPost }: MainPropsType) {
             </div>
 
             <div className="middle-block__wrap">
-                <AddPost addPost={addPost}/>
+                <AddPost
+                    addPost={addPost}
+                    newPostText={newPostText}
+                    updateNewPostText={updateNewPostText}
+                />
                 <Wall posts={posts}/>
             </div>
 
