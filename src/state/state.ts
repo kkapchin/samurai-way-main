@@ -2,7 +2,6 @@ import {posts} from "../mocks/posts";
 import {users} from "../mocks/users";
 import {StateType} from "../types/state-type";
 import {friends} from "../mocks/friends";
-import {render} from "../render";
 
 const DEFAULT_TEXT = '';
 
@@ -17,6 +16,8 @@ const state: StateType = {
         newMessageText: DEFAULT_TEXT,
     },
 }
+
+let onChange = () => {};
 
 export const addPost = (text: string) => {
     const newPost = {
@@ -33,17 +34,21 @@ export const addPost = (text: string) => {
 
     state.main.posts = [newPost, ...state.main.posts];
     state.main.newPostText = DEFAULT_TEXT;
-    render(state);
+    onChange();
 }
 
 export const updateNewPostText = (text: string) => {
     state.main.newPostText = text;
-    render(state);
+    onChange();
 }
 
 export const updateNewMessageText = (text: string) => {
     state.messenger.newMessageText = text;
-    render(state);
+    onChange();
+}
+
+export const subscribe = (observer: () => void) => {
+    onChange = observer;
 }
 
 export default state;
