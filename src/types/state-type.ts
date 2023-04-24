@@ -9,5 +9,6 @@ export type StateType = {
     }
     messenger: {
         users: Array<UserType>
+        newMessageText: string
     }
 }

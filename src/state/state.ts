@@ -4,16 +4,17 @@ import {StateType} from "../types/state-type";
 import {friends} from "../mocks/friends";
 import {render} from "../render";
 
-const DEFAULT_NEW_POST = '';
+const DEFAULT_TEXT = '';
 
 const state: StateType = {
     main: {
         posts: posts,
         friends: friends,
-        newPostText: DEFAULT_NEW_POST,
+        newPostText: DEFAULT_TEXT,
     },
     messenger: {
-        users: users
+        users: users,
+        newMessageText: DEFAULT_TEXT,
     },
 }
 
@@ -31,12 +32,17 @@ export const addPost = (text: string) => {
     }
 
     state.main.posts = [newPost, ...state.main.posts];
-    state.main.newPostText = DEFAULT_NEW_POST;
+    state.main.newPostText = DEFAULT_TEXT;
     render(state);
 }
 
 export const updateNewPostText = (text: string) => {
     state.main.newPostText = text;
+    render(state);
+}
+
+export const updateNewMessageText = (text: string) => {
+    state.messenger.newMessageText = text;
     render(state);
 }
 
