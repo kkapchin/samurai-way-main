@@ -2,8 +2,7 @@ import {posts} from "../mocks/posts";
 import {users} from "../mocks/users";
 import {StateType} from "../types/state-type";
 import {friends} from "../mocks/friends";
-
-const DEFAULT_TEXT = '';
+import {DEFAULT_TEXT} from "../const";
 
 const state: StateType = {
     main: {
@@ -15,40 +14,6 @@ const state: StateType = {
         users: users,
         newMessageText: DEFAULT_TEXT,
     },
-}
-
-let onChange = () => {};
-
-export const addPost = (text: string) => {
-    const newPost = {
-        id: new Date().getTime(),
-        text: text,
-        time: '1 min ago',
-        user: {
-            id: 2,
-            name: 'Madarka Alexandrovich',
-            avatar: 'https://oyster.ignimgs.com/mediawiki/apis.ign.com/star-wars-episode-7/8/83/Jabba-the-hut.jpg?width=640',
-
-        }
-    }
-
-    state.main.posts = [newPost, ...state.main.posts];
-    state.main.newPostText = DEFAULT_TEXT;
-    onChange();
-}
-
-export const updateNewPostText = (text: string) => {
-    state.main.newPostText = text;
-    onChange();
-}
-
-export const updateNewMessageText = (text: string) => {
-    state.messenger.newMessageText = text;
-    onChange();
-}
-
-export const subscribe = (observer: () => void) => {
-    onChange = observer;
 }
 
 export default state;
